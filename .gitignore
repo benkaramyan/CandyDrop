@@ -166,3 +166,5 @@ Library/ArtifactDB-lock
 Library/ArtifactDB
 /Library
 *.log
+/Library
+/UserSettings
