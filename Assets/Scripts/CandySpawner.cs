@@ -1,9 +1,10 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class CandySpawner : MonoBehaviour
 {
     public GameObject[] candyPrefabs;   // Array to hold multiple candy prefabs
+    public Vector2 releaseForce = new Vector2(0, 200f); // Public field for the release force
     private GameObject currentCandy;    // Track the currently active candy
 
     void Start()
@@ -23,9 +24,13 @@ public class CandySpawner : MonoBehaviour
             // Spawn the selected candy prefab at the spawner's position
             currentCandy = Instantiate(selectedCandy, transform.position, Quaternion.identity);
 
-            // Link the spawner to the candy's drag script
+            // Link the spawner to the candy's drag script and set the release force
             CandyDrag candyDrag = currentCandy.GetComponent<CandyDrag>();
-            candyDrag.SetSpawner(this);
+            if (candyDrag != null)
+            {
+                candyDrag.SetSpawner(this);
+                candyDrag.SetReleaseForce(releaseForce); // Set the release force for the candy
+            }
         }
     }
 
@@ -33,7 +38,7 @@ public class CandySpawner : MonoBehaviour
     public IEnumerator DelayNextSpawn()
     {
         yield return new WaitForSeconds(1f); // 1-second delay
-        currentCandy = null;                   // Reset current candy reference
-        SpawnCandy();                          // Spawn the next candy
+        currentCandy = null;                 // Reset current candy reference
+        SpawnCandy();                        // Spawn the next candy
     }
 }
