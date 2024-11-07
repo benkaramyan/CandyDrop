@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9c84b4c47ea55466c8211c52333bbdd4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - candyTracker: {fileID: 940249385842266043, guid: 261129799a3a04ac28db638f52d64c6d, type: 3}
+  - winPanel: {instanceID: 0}
+  - levelDatabase: {fileID: 11400000, guid: 79b46593c29a049b7b4a06ae0c32cc54, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

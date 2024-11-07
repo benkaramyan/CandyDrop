@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 972edce54184a4d71af203ed5d16179d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - levelGoal: {instanceID: 0}
+  - goalItemPrefab: {fileID: 9034680916504461036, guid: 9d7f2253673684a32a885427a82aa07b, type: 3}
+  - goalPanel: {fileID: 5670093902819943709, guid: 95b147e220eb2489fae7f4998350a5e7, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
